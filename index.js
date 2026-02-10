@@ -97,7 +97,7 @@ app.post("/bfhl", async (req, res) => {
         );
 
         const text = response.data.choices[0].message.content;
-        data = text.split(" ")[0];
+        data = text.trim();
       } catch (error) {
         data = "Mumbai";
       }
